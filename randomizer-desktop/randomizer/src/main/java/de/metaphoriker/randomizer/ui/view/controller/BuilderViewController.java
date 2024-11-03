@@ -20,6 +20,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
@@ -165,17 +167,20 @@ public class BuilderViewController {
 
     private void updateBuilderVBox() {
         builderVBox.getChildren().clear();
-        builderViewModel
-                .getCurrentActionsProperty()
-                .forEach(
-                        action -> {
-                            Label actionLabel = new Label(action.getName());
-                            actionLabel.getStyleClass().add("selected-actions-label");
-                            actionLabel.setOnMouseClicked(
-                                    _ -> actionSettingsController.setAction(action));
-                            setupDragAlreadyDropped(actionLabel, action); // setup special drag within listview
-                            builderVBox.getChildren().add(actionLabel);
-                        });
+    builderViewModel
+        .getCurrentActionsProperty()
+        .forEach(
+            action -> {
+              Label actionLabel = new Label(action.getName());
+              actionLabel.getStyleClass().add("selected-actions-label");
+                ImageView imageView = new ImageView(new Image("de/metaphoriker/randomizer/images/heart.png"));
+                imageView.setFitWidth(16);
+                imageView.setFitHeight(16);
+                actionLabel.setGraphic(imageView);
+              actionLabel.setOnMouseClicked(_ -> actionSettingsController.setAction(action));
+              setupDragAlreadyDropped(actionLabel, action); // setup special drag within listview
+              builderVBox.getChildren().add(actionLabel);
+            });
     }
 
     private void setupDrag(Label label, Action action) {

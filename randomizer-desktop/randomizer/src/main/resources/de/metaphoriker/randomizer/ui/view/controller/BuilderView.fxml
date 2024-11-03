@@ -10,49 +10,50 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+
 <AnchorPane prefHeight="488.0" prefWidth="688.0" styleClass="builder-view" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.metaphoriker.randomizer.ui.view.controller.BuilderViewController">
     <children>
-        <HBox prefHeight="488.0" prefWidth="688.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" styleClass="builder">
+        <HBox prefHeight="488.0" prefWidth="688.0" styleClass="builder" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox prefHeight="488.0" prefWidth="140.0" VBox.vgrow="ALWAYS" styleClass="builder-left-bar">
+                <VBox prefHeight="488.0" prefWidth="140.0" styleClass="builder-left-bar" VBox.vgrow="ALWAYS">
                     <children>
-                        <VBox prefHeight="240.0" prefWidth="140.0" VBox.vgrow="ALWAYS" styleClass="builder-actions">
+                        <VBox prefHeight="240.0" prefWidth="140.0" styleClass="builder-actions" VBox.vgrow="ALWAYS">
                             <children>
                                 <HBox prefHeight="24.0" prefWidth="140.0" styleClass="builder-actions-top">
                                     <children>
-                                        <Label text="Actions" styleClass="builder-actions-label"/>
-                                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS" styleClass="builder-actions-search">
+                                        <Label styleClass="builder-actions-label" text="Actions" />
+                                        <HBox alignment="CENTER_RIGHT" styleClass="builder-actions-search" HBox.hgrow="ALWAYS">
                                             <children>
-                                                <TextField fx:id="searchField" prefHeight="16.0" prefWidth="82.0" HBox.hgrow="ALWAYS" styleClass="builder-actions-searchfield"/>
+                                                <TextField fx:id="searchField" prefHeight="16.0" prefWidth="82.0" styleClass="builder-actions-searchfield" HBox.hgrow="ALWAYS" />
                                             </children>
                                         </HBox>
                                     </children>
                                 </HBox>
                                 <Separator prefWidth="140.0" />
-                                <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" VBox.vgrow="ALWAYS" fitToHeight="true" fitToWidth="true" styleClass="builder-actions-scrollpane">
+                                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="builder-actions-scrollpane" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
                                     <content>
-                                        <VBox fx:id="actionsVBox" prefWidth="140.0" styleClass="builder-actions-categories"/>
+                                        <VBox fx:id="actionsVBox" prefWidth="140.0" styleClass="builder-actions-categories" />
                                     </content>
                                 </ScrollPane>
                             </children>
                         </VBox>
-                        <VBox prefHeight="240.0" prefWidth="140.0" VBox.vgrow="ALWAYS" styleClass="builder-sequences">
+                        <VBox prefHeight="240.0" prefWidth="140.0" styleClass="builder-sequences" VBox.vgrow="ALWAYS">
                             <children>
                                 <HBox prefHeight="24.0" prefWidth="140.0" styleClass="builder-sequences-top">
                                     <children>
-                                        <Label text="Sequences" styleClass="builder-sequences-label"/>
-                                        <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="14.0" HBox.hgrow="ALWAYS" styleClass="builder-sequences-buttons">
+                                        <Label styleClass="builder-sequences-label" text="Sequences" />
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="14.0" styleClass="builder-sequences-buttons" HBox.hgrow="ALWAYS">
                                             <children>
-                                                <Button fx:id="addSequenceButton" mnemonicParsing="false" onAction="#onAddSequence" styleClass="builder-sequences-add-sequence-button"/>
-                                                <Button fx:id="sequenceFolderButton" mnemonicParsing="false" onAction="#onOpenSequenceFolder" styleClass="builder-sequences-folder-button"/>
+                                                <Button fx:id="addSequenceButton" mnemonicParsing="false" onAction="#onAddSequence" styleClass="builder-sequences-add-sequence-button" />
+                                                <Button fx:id="sequenceFolderButton" mnemonicParsing="false" onAction="#onOpenSequenceFolder" styleClass="builder-sequences-folder-button" />
                                             </children>
                                         </HBox>
                                     </children>
                                 </HBox>
                                 <Separator prefWidth="140.0" />
-                                <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="builder-sequences-scrollpane">
+                                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="builder-sequences-scrollpane" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
                                     <content>
-                                        <VBox fx:id="actionSequencesVBox" styleClass="builder-actions-sequences"/>
+                                        <VBox fx:id="actionSequencesVBox" styleClass="builder-actions-sequences" />
                                     </content>
                                 </ScrollPane>
                             </children>
@@ -61,16 +62,16 @@
                 </VBox>
                 <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
                     <children>
-                        <HBox VBox.vgrow="ALWAYS" styleClass="sequence-builder">
+                        <HBox styleClass="sequence-builder" VBox.vgrow="ALWAYS">
                             <children>
                                 <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
                                     <children>
                                         <BorderPane VBox.vgrow="ALWAYS">
                                             <top>
-                                                <VBox prefHeight="46.0" BorderPane.alignment="CENTER" styleClass="sequence-naming">
+                                                <VBox prefHeight="46.0" styleClass="sequence-naming" BorderPane.alignment="CENTER">
                                                     <children>
-                                                        <Label fx:id="sequenceNameLabel" styleClass="sequence-name-label" text="Sequence"/>
-                                                        <Label fx:id="sequenceDescriptionLabel" styleClass="sequence-description-label" text="description"/>
+                                                        <Label fx:id="sequenceNameLabel" styleClass="sequence-name-label" text="Sequence" />
+                                                        <Label fx:id="sequenceDescriptionLabel" styleClass="sequence-description-label" text="description" />
                                                     </children>
                                                     <padding>
                                                         <Insets left="5.0" top="5.0" />
@@ -78,23 +79,26 @@
                                                 </VBox>
                                             </top>
                                             <right>
-                                                <VBox alignment="CENTER" prefHeight="300.0" prefWidth="36.0" BorderPane.alignment="CENTER" styleClass="sequence-builder-buttons-vbox">
+                                                <VBox alignment="CENTER" prefHeight="300.0" prefWidth="36.0" styleClass="sequence-builder-buttons-vbox" BorderPane.alignment="CENTER">
                                                     <children>
                                                         <VBox alignment="CENTER" styleClass="sequence-builder-buttons">
                                                             <children>
-                                                                <Button fx:id="randomizeButton" mnemonicParsing="false" onAction="#onRandomize" styleClass="builder-randomize-button"/>
-                                                                <Button fx:id="actionsClearButton" mnemonicParsing="false" onAction="#onActionsClear" styleClass="builder-actions-clear-button"/>
-                                                                <Button fx:id="saveSequenceButton" mnemonicParsing="false" onAction="#onSaveSequence" styleClass="builder-save-sequence-button"/>
+                                                                <Button fx:id="randomizeButton" mnemonicParsing="false" onAction="#onRandomize" styleClass="builder-randomize-button" />
+                                                                <Button fx:id="actionsClearButton" mnemonicParsing="false" onAction="#onActionsClear" styleClass="builder-actions-clear-button" />
+                                                                <Button fx:id="saveSequenceButton" mnemonicParsing="false" onAction="#onSaveSequence" styleClass="builder-save-sequence-button" />
                                                             </children>
                                                         </VBox>
                                                     </children>
                                                 </VBox>
                                             </right>
                                             <center>
-                                                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER" prefHeight="272.0" prefWidth="324.0" styleClass="builder-selected-actions-scrollpane">
+                                                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="272.0" prefWidth="324.0" styleClass="builder-selected-actions-scrollpane" vbarPolicy="AS_NEEDED">
                                                     <content>
-                                                        <VBox fx:id="builderVBox" prefHeight="272.0" prefWidth="324.0" VBox.vgrow="ALWAYS" styleClass="builder-selected-actions-vbox"/>
+                                                        <VBox fx:id="builderVBox" prefHeight="272.0" prefWidth="324.0" styleClass="builder-selected-actions-vbox" VBox.vgrow="ALWAYS" />
                                                     </content>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
                                                 </ScrollPane>
                                             </center>
                                         </BorderPane>
@@ -104,7 +108,7 @@
                         </HBox>
                     </children>
                 </VBox>
-                <VBox fx:id="settingsHolder" prefHeight="488.0" prefWidth="140.0" styleClass="action-settings"/>
+                <VBox fx:id="settingsHolder" prefHeight="488.0" prefWidth="140.0" styleClass="action-settings" />
             </children>
         </HBox>
     </children>

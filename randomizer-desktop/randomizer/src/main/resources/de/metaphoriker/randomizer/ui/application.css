@@ -423,15 +423,34 @@
     -fx-background-color: #0C171A;
 }
 
+.decrement-button, .increment-button {
+    -fx-background-color: red;
+}
+
+.builder-selected-actions-scrollpane .scroll-bar:vertical {
+    -fx-fit-to-height: true;
+    -fx-background-color: transparent;
+    -fx-padding: 0px 12px 0px 0px;
+}
+
+.builder-selected-actions-scrollpane .scroll-bar:vertical .thumb {
+    -fx-background-color: pink;
+}
+
+
 .builder-selected-actions-vbox {
     -fx-pref-width: 324px;
     -fx-pref-height: 272px;
     -fx-spacing: 4px;
     -fx-padding: 0px 0px 8px 8px;
-    -fx-background-color: #0C171A;
+    -fx-background-image: url("../images/rose.png");
+    -fx-background-color: transparent;
+    -fx-background-position: center;
+    -fx-background-size: 324px 272px;
+
 }
 
-.selected-actions-label {
+.selected-actions-label {;
     -fx-font-family: Roboto;
     -fx-font-size: 12px;
     -fx-font-style: normal;
@@ -439,7 +458,7 @@
     -fx-text-fill: #DAF0F3;
     -fx-padding: 0px 3px;
     -fx-background-radius: 4px;
-    -fx-background-color: #213539;
+    -fx-background-color: palevioletred;
 }
 
 .builder-actions-scrollpane:focused, .builder-sequences-scrollpane:focused, .builder-selected-actions-scrollpane:focused {

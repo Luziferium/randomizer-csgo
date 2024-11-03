@@ -48,7 +48,7 @@ public class RandomizerWindowController implements Initializable {
     registerViewListener();
     setupControlBarClickTransparency();
 
-    addPreloadingGif();
+    //addPreloadingGif();
   }
 
   private void addPreloadingGif() {
